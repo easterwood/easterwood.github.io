@@ -153,7 +153,7 @@ GEM
       html-pipeline (~> 2.2)
       jekyll (>= 3.0)
     kramdown (1.13.2)
-    libv8 (3.16.14.19)
+    libv8 (3.16.14.19-x86_64-linux)
     liquid (3.0.6)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
@@ -202,12 +202,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  execjs (~> 2.7.0)
+  execjs
   github-pages
-  jekyll-feed (~> 0.6)
-  minima (~> 2.0)
-  therubyracer (~> 0.12.3)
-  tzinfo-data
+  jekyll-feed
+  jekyll-gist
+  jekyll-paginate
+  jekyll-sitemap
+  jemoji
+  therubyracer
 
 BUNDLED WITH
    1.15.3
