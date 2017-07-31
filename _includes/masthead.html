@@ -5,12 +5,19 @@
         <a class="site-title" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
+            {% if site.data.ui-text[site.locale][link.title] %}
+              {% capture title %}{{ site.data.ui-text[site.locale][link.title] }}{% endcapture %}
+            {% elsif site.data.ui-text['en'][link.title] %}
+              {% capture title %}{{ site.data.ui-text['en'][link.title] }}{% endcapture %}
+            {% else %}
+              {% capture title %}{{ link.title }}{% endcapture %}
+            {% endif %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = site.url | append: site.baseurl %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ title }}</a></li>
           {% endfor %}
         </ul>
         <button><div class="navicon"></div></button>
