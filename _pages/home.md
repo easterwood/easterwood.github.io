@@ -11,15 +11,15 @@ feature_row:
   - image_path: /assets/images/using-jekyll-2016-feature.jpg
     alt: "placeholder image 1"
     title: "Software"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    excerpt: ""
   - image_path: /assets/images/using-jekyll-2016-feature.jpg
     alt: "placeholder image 2"
     title: "Hardware"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    excerpt: ""
   - image_path: /assets/images/using-jekyll-2016-feature.jpg
     alt: "placeholder image 3"
     title: "Betrieb/Wartung"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    excerpt: ""
 ---
 {% include feature_row id="intro" type="center" %}
 
