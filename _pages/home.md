@@ -1,26 +1,24 @@
 ---
 layout: splash
+permalink: /
 header:
   image: /assets/images/using-jekyll-2016-feature.jpg
 classes:
   - landing
 intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: 'Ich biete Hardware und Software Beratung für Unternehmen und Privatepersonen. '
 feature_row:
   - image_path: /assets/images/using-jekyll-2016-feature.jpg
     alt: "placeholder image 1"
-    title: "Placeholder 1"
+    title: "Software"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
   - image_path: /assets/images/using-jekyll-2016-feature.jpg
     alt: "placeholder image 2"
-    title: "Placeholder 2"
+    title: "Hardware"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--inverse"
   - image_path: /assets/images/using-jekyll-2016-feature.jpg
     alt: "placeholder image 3"
-    title: "Placeholder 3"
+    title: "Betrieb/Wartung"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
 ---
 {% include feature_row id="intro" type="center" %}
