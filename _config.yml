@@ -6,46 +6,50 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
+#theme			 : "minimal-mistakes-jekyll"
+remote_theme	         : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default"
 locale                   : "de"
-title                    : "YAPB - Yet another programming blog"
+title                    : "IT-Consulting Osterwald"
 title_separator          : "-"
 name                     : "Alexander Osterwald"
 description              : "An amazing website."
 url                      : "https://easterwood.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : easterwood/easterwood.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : false #false (default)
 words_per_minute         : 200
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
+#comments:
+#  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+#  disqus:
+#    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+#  discourse:
+#    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+#  facebook:
     # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "master"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "docs/_data/comments/{options.slug}" # "/_data/comments/{options.slug}" (default)
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+#    appid                :
+#    num_posts            : # 5 (default)
+#    colorscheme          : # "light" (default), "dark"
+#staticman:
+#  allowedFields          : ['name', 'email', 'url', 'message']
+#  branch                 : "master"
+#  commitMessage          : "New comment."
+#  filename               : comment-{@timestamp}
+#  format                 : "yml"
+#  moderation             : true
+#  path                   : "docs/_data/comments/{options.slug}" # "/_data/comments/{options.slug}" (default)
+#  requiredFields         : ['name', 'email', 'message']
+#  transforms:
+#    email                : "md5"
+#  generatedFields:
+#    date:
+#      type               : "date"
+#      options:
+#        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   path                   : # blank (default) uses feed.xml
+search			 : true
 
 # SEO Related
 google_site_verification :
@@ -101,7 +105,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "AlexEasterwood"
   vine             :
   weibo            :
   xing             :
@@ -185,6 +189,8 @@ plugins_dir:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-remote-theme
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -193,6 +199,8 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-remote-theme
+  - jekyll-archives
 
 
 # Archives
@@ -212,16 +220,16 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+#jekyll-archives:
+#  enabled:
+#    - category-archive
+#    - tags
+#  layouts:
+#    category: archive-taxonomy
+#    tag: archive-taxonomy
+#  permalinks:
+#    category: /category-archive/:name/
+#    tag: /tags/:name/
 
 
 # HTML Compression
@@ -234,7 +242,18 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: # true
+      share: false
+      related: true
+   # _posts
   - scope:
       path: ""
       type: posts
