@@ -6,7 +6,7 @@ header:
 classes:
   - landing
 intro: 
-  - excerpt: 'Ich biete Hardware und Software Beratung für Unternehmen und Privatepersonen. '
+  - excerpt: 'Ich biete Hardware und Software Beratung für Unternehmen und Privatpersonen. '
 feature_row:
   - image_path: /assets/images/using-jekyll-2016-feature.jpg
     alt: "placeholder image 1"
