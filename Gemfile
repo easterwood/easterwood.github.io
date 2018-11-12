@@ -13,5 +13,6 @@ group :jekyll_plugins do
   gem "execjs"
   #gem "jekyll-data"
   gem "jekyll-remote-theme"
-  gem 'jekyll-archives'
+  gem "jekyll-archives"
+  gem "jekyll-include-cache"
 end
